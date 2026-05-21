@@ -382,6 +382,9 @@ function registerSchedule(data) {
         } catch (err) {
             console.log(err);
         }
+        {
+            timezone: "Asia/Jakarta";
+        }
     });
 }
 
