@@ -356,7 +356,6 @@ bot.onText(/\/kirim/, async (msg) => {
 // =====================================
 // REGISTER SCHEDULE
 // =====================================
-
 function registerSchedule(data) {
     const split = data.time.split(":");
     const hour = split[0];
@@ -382,12 +381,11 @@ function registerSchedule(data) {
         } catch (err) {
             console.log(err);
         }
-        {
-            timezone: "Asia/Jakarta";
-        }
+
+    }, {
+        timezone: "Asia/Jakarta"  // <-- tambah ini
     });
 }
-
 // =====================================
 // LOAD DATABASE SCHEDULE
 // =====================================
