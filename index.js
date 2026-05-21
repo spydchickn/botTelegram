@@ -3,18 +3,6 @@ const TelegramBot = require("node-telegram-bot-api");
 const qrcode = require("qrcode-terminal");
 const cron = require("node-cron");
 const mongoose = require("mongoose");
-const browser = await puppeteer.launch({
-    headless: true,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
-    args: [
-        "--no-sandbox",
-        "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-gpu",
-        "--no-zygote",
-        "--single-process",
-    ],
-});
 
 // =====================================
 // CONFIG
@@ -56,11 +44,18 @@ const bot = new TelegramBot(TELEGRAM_TOKEN, {
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        headless: false,
-        args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        headless: true,
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-gpu",
+            "--no-zygote",
+            "--single-process",
+        ],
     },
 });
-
 // =====================================
 // TEMP DATA - JADWAL
 // =====================================
