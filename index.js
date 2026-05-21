@@ -358,10 +358,16 @@ bot.onText(/\/kirim/, async (msg) => {
 // =====================================
 function registerSchedule(data) {
     const split = data.time.split(":");
-    const hour = split[0];
-    const minute = split[1];
+    const hour = parseInt(split[0]);
+    const minute = parseInt(split[1]);
 
-    cron.schedule(`${minute} ${hour} * * *`, async () => {
+    // WIB = UTC+7, kurangi 7 jam
+    let utcHour = hour - 7;
+    if (utcHour < 0) utcHour += 24;
+
+    console.log(`Schedule: ${data.time} WIB = ${utcHour}:${minute} UTC`);
+
+    cron.schedule(`${minute} ${utcHour} * * *`, async () => {
         try {
             const number = data.number + "@c.us";
 
@@ -381,9 +387,6 @@ function registerSchedule(data) {
         } catch (err) {
             console.log(err);
         }
-
-    }, {
-        timezone: "Asia/Jakarta"  // <-- tambah ini
     });
 }
 // =====================================
