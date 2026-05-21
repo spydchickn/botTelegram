@@ -1,0 +1,4 @@
+2026/05/20-17:11:33.256 9f8 Creating DB C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\Sync Data\LevelDB since it was missing.
+2026/05/20-17:11:33.365 9f8 Reusing MANIFEST C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/05/20-17:11:33.366 9f8 Recovering log #3
+2026/05/20-17:11:33.369 9f8 Reusing old log C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\Sync Data\LevelDB/000003.log 

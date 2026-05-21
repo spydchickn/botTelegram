@@ -1,0 +1,4 @@
+2026/05/20-17:11:33.752 9f8 Creating DB C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\shared_proto_db since it was missing.
+2026/05/20-17:11:33.771 9f8 Reusing MANIFEST C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\shared_proto_db/MANIFEST-000001
+2026/05/20-17:11:33.772 9f8 Recovering log #3
+2026/05/20-17:11:33.774 9f8 Reusing old log C:\Users\Spydchickn\Desktop\wa-telegram-bot\.wwebjs_auth\session-bot-wa\Default\shared_proto_db/000003.log 
